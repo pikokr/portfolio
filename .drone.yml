@@ -6,7 +6,7 @@ name: publish
 workspace:
   path: /portfolio
 
-when:
+trigger:
   branch:
   - master
 
