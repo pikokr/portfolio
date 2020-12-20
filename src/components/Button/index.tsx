@@ -1,10 +1,9 @@
 import React from 'react';
 
 const Button = ((props) => {
-    return (
-        // @ts-ignore
-        <button {...props}/>
-    );
-}) as React.FC<HTMLButtonElement>
+  return (
+    <button {...props}>{props.children}</button>
+  );
+}) as React.FC<HTMLButtonElement & any>;
 
 export default Button;
