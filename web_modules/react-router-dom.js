@@ -2469,4 +2469,4 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
   });
 });
 
-export { BrowserRouter };
+export { BrowserRouter, Route, Switch };
