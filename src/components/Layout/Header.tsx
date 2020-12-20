@@ -1,29 +1,40 @@
 import React from 'react';
-import { Link as RouterLink, RouteComponentProps, withRouter } from 'react-router-dom';
-import classes from './Header.module.scss'
-import clsx from 'clsx'
+import {
+  Link as RouterLink,
+  RouteComponentProps,
+  withRouter,
+} from 'react-router-dom';
+import classes from './Header.module.scss';
+import clsx from 'clsx';
 
-const Link = withRouter(({to, children}: any & RouteComponentProps<any>) => {
-    return <RouterLink to={to} className={clsx({
-        [classes.active]: location.pathname === to
-    })}>{children}</RouterLink>
-})
+const Link = withRouter(({ to, children }: any & RouteComponentProps<any>) => {
+  return (
+    <RouterLink
+      to={to}
+      className={clsx({
+        [classes.active]: location.pathname === to,
+      })}
+    >
+      {children}
+    </RouterLink>
+  );
+});
 
-const Header = ({location}: RouteComponentProps<any>) => {
-    return (
-        <div className={classes.container}>
-            <h2>헤더</h2>
-            <div style={{flexGrow: 1}}/>
-            <ul className={classes.menuContainer}>
-                <li>
-                    <Link to="/">About</Link>
-                </li>
-                <li>
-                    <Link to="/projects">Projects</Link>
-                </li>
-            </ul>
-        </div>
-    );
+const Header = () => {
+  return (
+    <div className={classes.container}>
+      <h2>헤더</h2>
+      <div style={{ flexGrow: 1 }} />
+      <ul className={classes.menuContainer}>
+        <li>
+          <Link to="/">About</Link>
+        </li>
+        <li>
+          <Link to="/projects">Projects</Link>
+        </li>
+      </ul>
+    </div>
+  );
 };
 
-export default withRouter(Header);
+export default Header;
