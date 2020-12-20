@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom';
 import classes from './Header.module.scss';
 import clsx from 'clsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Drawer from './Drawer';
 
 const Link = withRouter(({ to, children }: any & RouteComponentProps<any>) => {
   return (
@@ -21,22 +23,33 @@ const Link = withRouter(({ to, children }: any & RouteComponentProps<any>) => {
 });
 
 const Header = () => {
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+
+  const menu = (
+    <>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/projects">Projects</Link>
+      </li>
+    </>
+  );
+
   return (
-    <div className={classes.container}>
-      <h2>파랑이</h2>
-      <div style={{ flexGrow: 1 }} />
-      <ul className={`${classes.menuContainer} d-lg-block d-md-none`}>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/projects">Projects</Link>
-        </li>
-      </ul>
-      <div className={'d-lg-none d-md-block'}>
-        Menu
+    <>
+      <div className={classes.container}>
+        <h2>파랑이</h2>
+        <div style={{ flexGrow: 1 }} />
+        <ul className={`${classes.menuContainer} d-lg-block d-md-none`}>
+          {menu}
+        </ul>
+        <div className={'d-lg-none d-md-block'}>
+          <FontAwesomeIcon icon={['fas', 'bars']} size="2x" onClick={() => setDrawerOpen(true)} />
+        </div>
       </div>
-    </div>
+      <Drawer open={drawerOpen} close={() => setDrawerOpen(false)}/>
+    </>
   );
 };
 

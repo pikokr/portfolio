@@ -1,9 +1,8 @@
 import React from 'react';
 
-const Drawer = ({open}: {open: boolean}) => {
+const Drawer = ({open}: {open: boolean, close: () => void}) => {
     return (
         <div>
-            {open}
         </div>
     );
 };
