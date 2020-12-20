@@ -48,7 +48,9 @@ const Header = () => {
           <FontAwesomeIcon icon={['fas', 'bars']} size="2x" onClick={() => setDrawerOpen(true)} />
         </div>
       </div>
-      <Drawer open={drawerOpen} close={() => setDrawerOpen(false)}/>
+      <Drawer open={drawerOpen} close={() => setDrawerOpen(false)}>
+        {menu}
+      </Drawer>
     </>
   );
 };

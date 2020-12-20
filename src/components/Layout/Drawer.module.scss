@@ -1,0 +1,19 @@
+.container {
+    background: #fff;
+    border-left: 1px solid #000;
+}
+
+.backdrop {
+    background: #000;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    position: fixed;
+    z-index: 10000;
+    transition: opacity .25s ease;
+    &.active {
+        pointer-events: unset;
+        opacity: 0.5;
+    }
+}
