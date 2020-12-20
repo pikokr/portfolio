@@ -6,3 +6,16 @@ h1,h2,h3,h4,h5,h6 {
     padding: 0;
     margin: 0;
 }
+
+@media screen and (min-width: 1024px) {
+    .d-lg-block {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .d-md-none {
+        display: none;
+    }
+}
+

@@ -25,7 +25,7 @@ const Header = () => {
     <div className={classes.container}>
       <h2>파랑이</h2>
       <div style={{ flexGrow: 1 }} />
-      <ul className={classes.menuContainer}>
+      <ul className={`${classes.menuContainer} d-lg-block d-md-none`}>
         <li>
           <Link to="/">Home</Link>
         </li>
