@@ -33,6 +33,9 @@ const Header = () => {
           <Link to="/projects">Projects</Link>
         </li>
       </ul>
+      <div className={'d-lg-none d-md-block'}>
+        Menu
+      </div>
     </div>
   );
 };
