@@ -16,7 +16,7 @@ const Link = withRouter(({to, children}) => {
 const Header = () => {
   return /* @__PURE__ */ React.createElement("div", {
     className: classes.container
-  }, /* @__PURE__ */ React.createElement("h2", null, "\uD5E4\uB354"), /* @__PURE__ */ React.createElement("div", {
+  }, /* @__PURE__ */ React.createElement("h2", null, "\uD30C\uB791\uC774"), /* @__PURE__ */ React.createElement("div", {
     style: {flexGrow: 1}
   }), /* @__PURE__ */ React.createElement("ul", {
     className: classes.menuContainer
