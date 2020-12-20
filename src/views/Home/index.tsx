@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import classes from './home.module.scss'
 
 class HomePage extends Component {
     render() {
         return (
-            <div>
+            <div className={classes.root}>
                 홈
             </div>
         );
