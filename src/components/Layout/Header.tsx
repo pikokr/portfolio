@@ -1,8 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink, RouteComponentProps, withRouter } from 'react-router-dom';
 import classes from './Header.module.scss'
+import clsx from 'clsx'
 
-const Header = () => {
+const Link = withRouter(({to, children}: any & RouteComponentProps<any>) => {
+    return <RouterLink to={to} className={clsx({
+        [classes.active]: location.pathname === to
+    })}>{children}</RouterLink>
+})
+
+const Header = ({location}: RouteComponentProps<any>) => {
     return (
         <div className={classes.container}>
             <h2>헤더</h2>
@@ -19,4 +26,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default withRouter(Header);
