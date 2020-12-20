@@ -23,7 +23,7 @@ const Link = withRouter(({ to, children }: any & RouteComponentProps<any>) => {
 const Header = () => {
   return (
     <div className={classes.container}>
-      <h2>헤더</h2>
+      <h2>파랑이</h2>
       <div style={{ flexGrow: 1 }} />
       <ul className={classes.menuContainer}>
         <li>
