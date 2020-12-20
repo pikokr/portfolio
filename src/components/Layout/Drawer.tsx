@@ -16,7 +16,9 @@ const Drawer = ({
     <div className={clsx(styles.backdrop, {
         [styles.active]: open
     })} onClick={close}/>
-      <div>{children}</div>
+      <div className={clsx(styles.container, {
+        [styles.active]: open
+      })}>{children}</div>
     </>
   );
 };
