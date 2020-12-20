@@ -5,7 +5,7 @@ class HomePage extends Component {
     render() {
         return (
             <div className={classes.root}>
-                홈
+                <h1>파랑이</h1>
             </div>
         );
     }
