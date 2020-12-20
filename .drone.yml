@@ -7,8 +7,8 @@ workspace:
   path: /portfolio
 
 when:
-    branch:
-    - master
+  branch:
+  - master
 
 steps:
 - name: build
