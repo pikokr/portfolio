@@ -18,7 +18,9 @@ const Drawer = ({
     })} onClick={close}/>
       <div className={clsx(styles.container, {
         [styles.active]: open
-      })}>{children}</div>
+      })}>
+        <div className={styles.wrapper}>{children}</div>
+      </div>
     </>
   );
 };
