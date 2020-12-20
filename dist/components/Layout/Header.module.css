@@ -1,8 +1,14 @@
 .container {
-  padding: 10px 20px;
+  padding: 10px 15px 10px 20px;
   display: flex;
   align-items: center;
   height: 50px;
+  position: fixed;
+  background: #fff;
+  border-bottom: 1px solid #000;
+  width: calc(100vw - 35px);
+  left: 0;
+  top: 0;
 }
 
 ul.menuContainer li {

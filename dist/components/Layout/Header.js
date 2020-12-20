@@ -1,5 +1,8 @@
 import React from "../../../web_modules/react.js";
-import {Link as RouterLink, withRouter} from "../../../web_modules/react-router-dom.js";
+import {
+  Link as RouterLink,
+  withRouter
+} from "../../../web_modules/react-router-dom.js";
 import classes from "./Header.module.css.proxy.js";
 import clsx2 from "../../../web_modules/clsx.js";
 const Link = withRouter(({to, children}) => {
@@ -10,7 +13,7 @@ const Link = withRouter(({to, children}) => {
     })
   }, children);
 });
-const Header = ({location: location2}) => {
+const Header = () => {
   return /* @__PURE__ */ React.createElement("div", {
     className: classes.container
   }, /* @__PURE__ */ React.createElement("h2", null, "\uD5E4\uB354"), /* @__PURE__ */ React.createElement("div", {
@@ -23,4 +26,4 @@ const Header = ({location: location2}) => {
     to: "/projects"
   }, "Projects"))));
 };
-export default withRouter(Header);
+export default Header;
