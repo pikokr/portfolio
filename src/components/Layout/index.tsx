@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from './Footer';
 import Header from './Header';
 import classes from './Layout.module.scss'
 
@@ -11,6 +12,7 @@ class Layout extends Component {
                 <div className={classes.container}>
                     {this.props.children}
                 </div>
+                <Footer/>
             </>
         );
     }
