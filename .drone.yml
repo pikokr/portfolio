@@ -33,6 +33,11 @@ steps:
     password:
       from_secret: github_password
     pages_directory: build/
+  only:
+    event:
+    - push
+    branch:
+    - master
 
 
 
