@@ -9,6 +9,8 @@ workspace:
 trigger:
   branch:
   - master
+  evenet:
+  - push
 
 steps:
 - name: build
