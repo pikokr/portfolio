@@ -6,9 +6,11 @@ name: publish
 workspace:
   path: /portfolio
 
-when:
-    branch:
-    - master
+trigger:
+  branch:
+  - master
+  evenet:
+  - push
 
 steps:
 - name: build
@@ -31,6 +33,11 @@ steps:
     password:
       from_secret: github_password
     pages_directory: build/
+  only:
+    event:
+    - push
+    branch:
+    - master
 
 
 
