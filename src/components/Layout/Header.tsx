@@ -45,7 +45,11 @@ const Header = () => {
           {menu}
         </ul>
         <div className={'d-lg-none d-md-block'}>
-          <FontAwesomeIcon icon={['fas', 'bars']} size="2x" onClick={() => setDrawerOpen(true)} />
+          <FontAwesomeIcon
+            icon={['fas', 'bars']}
+            size="2x"
+            onClick={() => setDrawerOpen(true)}
+          />
         </div>
       </div>
       <Drawer open={drawerOpen} close={() => setDrawerOpen(false)}>
