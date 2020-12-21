@@ -42,7 +42,10 @@ const Header = () => {
   return (
     <>
       <div className={classes.container}>
-        <h2>파랑이</h2>
+        <h2><RouterLink to="/" style={{
+          color: '#000',
+          textDecoration: 'none'
+        }}>파랑이</RouterLink></h2>
         <div style={{ flexGrow: 1 }} />
         <ul className={`${classes.menuContainer} d-lg-block d-md-none`}>
           {menu}
