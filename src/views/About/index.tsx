@@ -4,7 +4,7 @@ class AboutPage extends Component {
     render() {
         return (
             <div>
-                소개
+                <h1>파랑이에 대해 더 알아볼까요?</h1>
             </div>
         );
     }
