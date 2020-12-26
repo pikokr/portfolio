@@ -6,7 +6,7 @@
     height: 100vh;
     right: -100%;
     max-width: 90vw;
-    transition: right .25s ease;
+    transition: right .25s ease, opacity .1s ease;
     pointer-events: none;
     opacity: 0;
     &.active {
