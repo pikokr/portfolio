@@ -1,0 +1,48 @@
+.container {
+    background: #fff;
+    border-left: 1px solid #000;
+    position: fixed;
+    z-index: 10001;
+    height: 100vh;
+    right: -100%;
+    max-width: 90vw;
+    transition: right .25s ease, opacity .1s ease;
+    pointer-events: none;
+    opacity: 0;
+    &.active {
+        pointer-events: unset;
+        opacity: 1;
+        right: 0;
+    }
+    .wrapper {
+        li {
+            list-style: none;
+            a {
+                padding: 10px;
+                display: flex;
+                color: #000;
+                text-decoration: none;
+                background: #fff;
+                transition: background .2s ease;
+                &:hover {
+                    background: #e0e0e0;
+                }
+            }
+        }
+    }
+}
+
+.backdrop {
+    background: #000;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    position: fixed;
+    z-index: 10000;
+    transition: opacity .25s ease;
+    &.active {
+        pointer-events: unset;
+        opacity: 0.5;
+    }
+}
