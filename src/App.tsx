@@ -1,22 +1,41 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Layout from './components/Layout';
-import AboutPage from './views/About';
-import HomePage from './views/Home';
+import React, { useState, useEffect } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-const App = () => {
+interface AppProps {}
+
+function App({}: AppProps) {
+  // Create the count state.
+  const [count, setCount] = useState(0);
+  // Create the counter (+1 every second).
+  useEffect(() => {
+    const timer = setTimeout(() => setCount(count + 1), 1000);
+    return () => clearTimeout(timer);
+  }, [count, setCount]);
+  // Return the App component.
   return (
-    <Route
-      render={({ location }) => (
-        <Layout>
-          <Switch location={location}>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/about" component={AboutPage} />
-          </Switch>
-        </Layout>
-      )}
-    />
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <p>
+          Page has been open for <code>{count}</code> seconds.
+        </p>
+        <p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </p>
+      </header>
+    </div>
   );
-};
+}
 
 export default App;
