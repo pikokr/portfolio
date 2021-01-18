@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import SideBar from './SideBar'
 
 const Header = () => {
@@ -13,7 +14,9 @@ const Header = () => {
           alignItems: 'center',
         }}
       >
-        <div className="text-2xl">test</div>
+        <Link to="/" className="text-2xl">
+          파랑이
+        </Link>
         <div className="flex-grow" />
         <div>
           <FontAwesomeIcon
