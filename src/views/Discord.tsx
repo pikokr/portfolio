@@ -52,6 +52,19 @@ const Discord = () => {
             </a>
           </div>
         </div>
+        <div className="bg-white border rounded-xl p-4">
+          <div className="text-xl">UniqueBots</div>
+          <div>UniqueCode에서 개발한 디스코드 봇 리스트에요!</div>
+          <div className="mt-1">
+            <a
+              href="https://discord.gg/An9MxV6a25"
+              target="_blank"
+              className="p-2 bg-blue-500 text-white rounded-lg"
+            >
+              들어가기
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   )
