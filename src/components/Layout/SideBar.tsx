@@ -20,7 +20,7 @@ const SideBar: React.FC<{
       />
       <div
         className={clsx(
-          'fixed h-full bg-white border-l transition-all flex flex-col',
+          'fixed h-full bg-white border-l transition-all flex flex-col top-0',
           {
             '-right-full': !open,
             'right-0': open,
