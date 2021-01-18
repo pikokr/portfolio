@@ -14,7 +14,7 @@ const Layout: React.FC = ({ children }) => {
       >
         <div>
           <div className="h-14 w-full" />
-          {children}
+          <div className="container mx-auto">{children}</div>
         </div>
         <div className="flex-grow" />
         <Footer />

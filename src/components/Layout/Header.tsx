@@ -6,9 +6,9 @@ const Header = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
 
   return (
-    <>
+    <div className="w-full fixed border-b h-14">
       <div
-        className="flex w-full fixed h-14 px-4 border-b"
+        className="flex container mx-auto h-full"
         style={{
           alignItems: 'center',
         }}
@@ -25,7 +25,7 @@ const Header = () => {
         </div>
       </div>
       <SideBar onClose={() => setSidebarOpen(false)} open={sidebarOpen} />
-    </>
+    </div>
   )
 }
 
