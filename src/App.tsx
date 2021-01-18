@@ -6,13 +6,13 @@ import ScrollToTop from './components/ScrollToTop'
 
 const App = () => {
   return (
-    <Layout>
-      <ScrollToTop>
+    <ScrollToTop>
+      <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
         </Switch>
-      </ScrollToTop>
-    </Layout>
+      </Layout>
+    </ScrollToTop>
   )
 }
 

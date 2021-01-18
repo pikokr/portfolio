@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className="w-full fixed border-b h-14">
       <div
-        className="flex container mx-auto h-full"
+        className="flex container mx-auto h-full px-2"
         style={{
           alignItems: 'center',
         }}

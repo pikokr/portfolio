@@ -12,11 +12,12 @@ const Layout: React.FC = ({ children }) => {
           minHeight: '100vh',
         }}
       >
-        <div>
+        <div className="flex-grow flex flex-col">
           <div className="h-14 w-full" />
-          <div className="container mx-auto">{children}</div>
+          <div className="container px-2 mx-auto flex-grow flex flex-col">
+            {children}
+          </div>
         </div>
-        <div className="flex-grow" />
         <Footer />
       </div>
     </div>
