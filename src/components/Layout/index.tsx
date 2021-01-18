@@ -16,7 +16,9 @@ const Layout: React.FC = ({ children }) => {
           {children}
         </div>
         <div className="flex-grow" />
-        <div className="p-4 w-full border-t">asdf</div>
+        <div className="p-4 w-full border-t text-right">
+          2020 &copy; PIKOSTUDIO
+        </div>
       </div>
     </div>
   )
