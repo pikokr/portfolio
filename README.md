@@ -1,25 +1,20 @@
-# New Project
+# portfolio
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+## Build Setup
 
-## Available Scripts
+```bash
+# install dependencies
+$ yarn install
 
-### npm start
+# serve with hot reload at localhost:3000
+$ yarn dev
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+# build for production and launch server
+$ yarn build
+$ yarn start
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+# generate static project
+$ yarn generate
+```
 
-### npm run build
-
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
-
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" to your `snowpack.config.js` config file.
-
-### npm test
-
-Launches the application test runner.
-Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
