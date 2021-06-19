@@ -1,0 +1,31 @@
+.page_transition-enter-active,
+.page_transition-leave-active {
+  transition: visibility .5s;
+}
+
+#transition_cover {
+  @apply w-screen h-screen fixed top-0 bg-blue-500 invisible -left-full;
+
+  z-index: 99999;
+  transition: left .5s, visibility .5s;
+}
+
+.page_transition-leave-active {
+  @apply invisible;
+  & ~ #transition_cover {
+    @apply left-0 visible;
+  }
+}
+//
+//.page_transition-before-leave {
+//}
+//
+//.page_transition-enter-active {
+//  @apply visible;
+//  & ~ #transition_cover {
+//    @apply left-full visible;
+//
+//    transition: left .5s;
+//  }
+//}
+//
